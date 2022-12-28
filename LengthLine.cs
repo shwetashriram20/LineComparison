@@ -11,9 +11,9 @@ namespace LineCmp
     {
         public static void calculateLengthLine()
         {
-            double Length = 0.0;
+            double Length1 = 0.0;
+            double Length2 = 0.0;
             
-            Console.WriteLine("Calculating length of two points of x,y Coordinates : ");
             
             Console.WriteLine("Enter x1,y1,x2,y2 values of first point : ");
             
@@ -21,9 +21,35 @@ namespace LineCmp
             double y1 = Convert.ToDouble(Console.ReadLine());
             double x2 = Convert.ToDouble(Console.ReadLine());
             double y2 = Convert.ToDouble(Console.ReadLine());
+            Length1 = Math.Sqrt((Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)));
 
-            Length = Math.Sqrt((Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)));
-            Console.WriteLine("The length of two points is: " + Length);
+
+            Console.WriteLine("Enter x1,y1,x2,y2 values of secound point : ");
+
+            double x3 = Convert.ToDouble(Console.ReadLine());
+            double y3 = Convert.ToDouble(Console.ReadLine());
+            double x4 = Convert.ToDouble(Console.ReadLine());
+            double y4 = Convert.ToDouble(Console.ReadLine());
+
+            Length2 = Math.Sqrt((Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2)));
+            
+            Console.WriteLine("length1:: {0}    length2:: {1} ", Length1, Length2);
+           
+            if (Length1 > Length2)
+            {
+                Console.WriteLine("lengthLine1 is greater than lengthLine2");
+            }
+            else if (Length1 < Length2)
+            {
+                Console.WriteLine("lengthLine1 is less than lengthLine2");
+            }
+            else
+            {
+                Console.WriteLine("Both lines are not equal");
+            }
         }
     }
 }
+
+        
+    
