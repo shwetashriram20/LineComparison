@@ -35,17 +35,14 @@ namespace LineCmp
             
             Console.WriteLine("length1:: {0}    length2:: {1} ", Length1, Length2);
            
-            if (Length1 > Length2)
+            if (Length1 == Length2)
             {
-                Console.WriteLine("lengthLine1 is greater than lengthLine2");
+                Console.WriteLine("Two lines are equal");
             }
-            else if (Length1 < Length2)
-            {
-                Console.WriteLine("lengthLine1 is less than lengthLine2");
-            }
+            
             else
             {
-                Console.WriteLine("Both lines are not equal");
+                Console.WriteLine("two lines are not equal");
             }
         }
     }
